@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,9 +10,112 @@ html {
   font-size: 62.5%;
 }
 
+:root {
+  --color-primary: crimson;
+  --color-white: #fff;
+}
+
 body {
   font-size: 1.6rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 1rem auto;
   font-family: "Montserrat", serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-text {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.logout-btn {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  background-color: var(--color-primary);
+  font-weight: 500;
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.new-item-form {
+  width: 60%;
+  margin: 2rem auto;
+  padding: 1rem;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  /* display: grid;
+  grid-template-columns: .2fr 1fr;
+  align-items: center; */
+}
+
+.form-group-label {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.form-group-input {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.form-group-textarea {
+  font-family: inherit;
+  padding: 1rem;
+  font-size: inherit;
+  font-weight: 500;
+  resize: vertical;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.form-btn, .new-item-btn {
+  font-family: inherit;
+  font-size: inherit;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn {
+  background-color: #888;
+}
+
+.form-btn:active {
+  transform: scale(1.01);
+}
+
+.new-item-btn {
+  width: 60%;
+  margin: 0 auto;
 }
