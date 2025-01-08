@@ -90,7 +90,8 @@ body {
   gap: 2rem;
 }
 
-.form-btn, .new-item-btn {
+.form-btn,
+.new-item-btn {
   font-family: inherit;
   font-size: inherit;
   display: block;
